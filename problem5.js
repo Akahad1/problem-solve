@@ -68,3 +68,12 @@ function capitalizeWords(sentence) {
   return sentence.replace(/\b\w/g, (char) => char.toUpperCase());
 }
 console.log(capitalizeWords("hello world"));
+function longestWord(sentence) {
+  return sentence
+    .split(" ")
+    .reduce(
+      (longest, word) => (word.length > longest.length ? word : longest),
+      ""
+    );
+}
+console.log(longestWord("I love programming"));
