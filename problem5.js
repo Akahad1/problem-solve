@@ -64,3 +64,7 @@ function factorial(n) {
   return n === 0 ? 1 : n * factorial(n - 1);
 }
 console.log(factorial(5)); // Output: 120
+function capitalizeWords(sentence) {
+  return sentence.replace(/\b\w/g, (char) => char.toUpperCase());
+}
+console.log(capitalizeWords("hello world"));
