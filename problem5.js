@@ -89,3 +89,7 @@ function isBalanced(str) {
   return stack.length === 0;
 }
 console.log(isBalanced("(())"));
+function findIntersection(arr1, arr2) {
+  return arr1.filter((num) => arr2.includes(num));
+}
+console.log(findIntersection([1, 2, 3], [2, 3, 4])); // Output: [2, 3]
