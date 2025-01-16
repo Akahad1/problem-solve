@@ -39,3 +39,6 @@ function longestWord(sentence) {
       ""
     );
 }
+function removeDuplicates(arr) {
+  return [...new Set(arr)];
+}

@@ -56,9 +56,7 @@ const secondMax = (arr) => {
 };
 
 console.log(secondMax([10, 20, 30, 40])); // 30
-function removeDuplicates(arr) {
-  return [...new Set(arr)];
-}
+
 console.log(removeDuplicates([1, 2, 2, 3, 4, 4])); // Output: [1, 2, 3, 4]
 function factorial(n) {
   return n === 0 ? 1 : n * factorial(n - 1);
