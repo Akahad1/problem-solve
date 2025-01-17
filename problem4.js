@@ -12,22 +12,8 @@ function sortArry(cars) {
 }
 
 console.log(sortArry(cars));
-function throttle(func, delay) {
-  let lastCall = 0;
-  return (...args) => {
-    const now = Date.now();
-    if (now - lastCall >= delay) {
-      lastCall = now;
-      func(...args);
-    }
-  };
-}
+
 function mergeSorted(arr1, arr2) {
   return [...arr1, ...arr2].sort((a, b) => a - b);
 }
 console.log(mergeSorted([1, 3, 5], [2, 4, 6])); // Output: [1, 2, 3, 4, 5, 6]
-
-function findIntersection(arr1, arr2) {
-  return arr1.filter((num) => arr2.includes(num));
-}
-console.log(findIntersection([1, 2, 3], [2, 3, 4])); // Output: [2, 3]
