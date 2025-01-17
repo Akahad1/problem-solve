@@ -91,3 +91,13 @@ function longestWord(sentence) {
 function removeDuplicates(arr) {
   return [...new Set(arr)];
 }
+function throttle(func, delay) {
+  let lastCall = 0;
+  return (...args) => {
+    const now = Date.now();
+    if (now - lastCall >= delay) {
+      lastCall = now;
+      func(...args);
+    }
+  };
+}
