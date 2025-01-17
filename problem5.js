@@ -80,3 +80,14 @@ function isBalanced(str) {
   return stack.length === 0;
 }
 console.log(isBalanced("(())"));
+function longestWord(sentence) {
+  return sentence
+    .split(" ")
+    .reduce(
+      (longest, word) => (word.length > longest.length ? word : longest),
+      ""
+    );
+}
+function removeDuplicates(arr) {
+  return [...new Set(arr)];
+}
