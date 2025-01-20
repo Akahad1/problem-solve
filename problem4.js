@@ -6,11 +6,6 @@ const cars = [
   { make: "BMW", model: "3 Series", year: 2019 },
 ];
 
-function sortArry(cars) {
-  const ascendingYear = cars.sort((a, b) => a.year - b.year);
-  return ascendingYear;
-}
-
 console.log(sortArry(cars));
 
 function mergeSorted(arr1, arr2) {
