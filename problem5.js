@@ -68,26 +68,3 @@ function capitalizeWords(sentence) {
 console.log(capitalizeWords("hello world"));
 
 console.log(longestWord("I love programming"));
-function isBalanced(str) {
-  const stack = [];
-  for (let char of str) {
-    if (char === "(") stack.push(char);
-    else if (char === ")") {
-      if (stack.length === 0) return false;
-      stack.pop();
-    }
-  }
-  return stack.length === 0;
-}
-console.log(isBalanced("(())"));
-function longestWord(sentence) {
-  return sentence
-    .split(" ")
-    .reduce(
-      (longest, word) => (word.length > longest.length ? word : longest),
-      ""
-    );
-}
-function removeDuplicates(arr) {
-  return [...new Set(arr)];
-}
