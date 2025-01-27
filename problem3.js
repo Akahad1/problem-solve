@@ -17,18 +17,7 @@ function squareDoubleAddFive(number) {
 }
 
 console.log(squareDoubleAddFive(5));
-function throttle(func, delay) {
-  let lastCall = 0;
-  return (...args) => {
-    const now = Date.now();
-    if (now - lastCall >= delay) {
-      lastCall = now;
-      func(...args);
-    }
-  };
-}
 
-console.log(findIntersection([1, 2, 3], [2, 3, 4])); // Output: [2, 3]
 function longestWord(sentence) {
   return sentence
     .split(" ")
