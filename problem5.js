@@ -68,3 +68,15 @@ function capitalizeWords(sentence) {
 console.log(capitalizeWords("hello world"));
 
 console.log(longestWord("I love programming"));
+function throttle(func, delay) {
+  let lastCall = 0;
+  return (...args) => {
+    const now = Date.now();
+    if (now - lastCall >= delay) {
+      lastCall = now;
+      func(...args);
+    }
+  };
+}
+
+console.log(findIntersection([1, 2, 3], [2, 3, 4])); // Output: [2, 3]
