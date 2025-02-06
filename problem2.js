@@ -25,7 +25,3 @@ function throttle(func, delay) {
 }
 
 console.log(findIntersection([1, 2, 3], [2, 3, 4])); // Output: [2, 3]
-function sortArry(cars) {
-  const ascendingYear = cars.sort((a, b) => a.year - b.year);
-  return ascendingYear;
-}
