@@ -26,3 +26,11 @@ function isBalanced(str) {
   }
   return stack.length === 0;
 }
+function longestWord(sentence) {
+  return sentence
+    .split(" ")
+    .reduce(
+      (longest, word) => (word.length > longest.length ? word : longest),
+      ""
+    );
+}

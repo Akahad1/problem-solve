@@ -18,14 +18,6 @@ function squareDoubleAddFive(number) {
 
 console.log(squareDoubleAddFive(5));
 
-function longestWord(sentence) {
-  return sentence
-    .split(" ")
-    .reduce(
-      (longest, word) => (word.length > longest.length ? word : longest),
-      ""
-    );
-}
 function removeDuplicates(arr) {
   return [...new Set(arr)];
 }
