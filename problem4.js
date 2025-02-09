@@ -27,10 +27,7 @@ function isBalanced(str) {
   }
   return stack.length === 0;
 }
-function sortArry(cars) {
-  const ascendingYear = cars.sort((a, b) => a.year - b.year);
-  return ascendingYear;
-}
+
 function longestWord(sentence) {
   return sentence
     .split(" ")
