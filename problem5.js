@@ -80,12 +80,3 @@ function throttle(func, delay) {
 }
 
 console.log(findIntersection([1, 2, 3], [2, 3, 4])); // Output: [2, 3]
-
-function longestWord(sentence) {
-  return sentence
-    .split(" ")
-    .reduce(
-      (longest, word) => (word.length > longest.length ? word : longest),
-      ""
-    );
-}

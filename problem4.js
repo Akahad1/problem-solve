@@ -31,3 +31,11 @@ function sortArry(cars) {
   const ascendingYear = cars.sort((a, b) => a.year - b.year);
   return ascendingYear;
 }
+function longestWord(sentence) {
+  return sentence
+    .split(" ")
+    .reduce(
+      (longest, word) => (word.length > longest.length ? word : longest),
+      ""
+    );
+}
