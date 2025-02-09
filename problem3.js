@@ -23,11 +23,3 @@ function removeDuplicates(arr) {
 }
 
 console.log(isBalanced("(())"));
-function longestWord(sentence) {
-  return sentence
-    .split(" ")
-    .reduce(
-      (longest, word) => (word.length > longest.length ? word : longest),
-      ""
-    );
-}
