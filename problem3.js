@@ -23,7 +23,34 @@ function removeDuplicates(arr) {
 }
 
 console.log(isBalanced("(())"));
-function sortArry(cars) {
-  const ascendingYear = cars.sort((a, b) => a.year - b.year);
-  return ascendingYear;
+
+function isBalanced(str) {
+  const stack = [];
+  for (let char of str) {
+    if (char === "(") stack.push(char);
+    else if (char === ")") {
+      if (stack.length === 0) return false;
+      stack.pop();
+    }
+  }
+  return stack.length === 0;
+}
+
+function longestWord(sentence) {
+  return sentence
+    .split(" ")
+    .reduce(
+      (longest, word) => (word.length > longest.length ? word : longest),
+      ""
+    );
+}
+function throttle(func, delay) {
+  let lastCall = 0;
+  return (...args) => {
+    const now = Date.now();
+    if (now - lastCall >= delay) {
+      lastCall = now;
+      func(...args);
+    }
+  };
 }
