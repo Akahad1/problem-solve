@@ -35,25 +35,3 @@ function isBalanced(str) {
   }
   return stack.length === 0;
 }
-
-function longestWord(sentence) {
-  return sentence
-    .split(" ")
-    .reduce(
-      (longest, word) => (word.length > longest.length ? word : longest),
-      ""
-    );
-}
-function throttle(func, delay) {
-  let lastCall = 0;
-  return (...args) => {
-    const now = Date.now();
-    if (now - lastCall >= delay) {
-      lastCall = now;
-      func(...args);
-    }
-  };
-}
-function findIntersection(arr1, arr2) {
-  return arr1.filter((num) => arr2.includes(num));
-}
