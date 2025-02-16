@@ -71,3 +71,10 @@ console.log(longestWord("I love programming"));
 
 console.log(findIntersection([1, 2, 3], [2, 3, 4])); // Output: [2, 3]
 
+function sortArry(cars) {
+  const ascendingYear = cars.sort((a, b) => a.year - b.year);
+  return ascendingYear;
+}
+function findIntersection(arr1, arr2) {
+  return arr1.filter((num) => arr2.includes(num));
+}
