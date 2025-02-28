@@ -114,3 +114,20 @@ function mergeSorted(arr1, arr2) {
   return [...arr1, ...arr2].sort((a, b) => a - b);
 }
 console.log(mergeSorted([1, 3, 5], [2, 4, 6])); // Output: [1, 2, 3, 4, 5, 6]
+function longestWord(sentence) {
+  return sentence
+    .split(" ")
+    .reduce(
+      (longest, word) => (word.length > longest.length ? word : longest),
+      ""
+    );
+}
+function double(number) {
+  const double = number * 2;
+  return addFive(double);
+}
+
+function addFive(number) {
+  const add5 = number + 5;
+  return add5;
+}

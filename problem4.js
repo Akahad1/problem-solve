@@ -7,20 +7,3 @@ const cars = [
 ];
 
 console.log(sortArry(cars));
-function longestWord(sentence) {
-  return sentence
-    .split(" ")
-    .reduce(
-      (longest, word) => (word.length > longest.length ? word : longest),
-      ""
-    );
-}
-function double(number) {
-  const double = number * 2;
-  return addFive(double);
-}
-
-function addFive(number) {
-  const add5 = number + 5;
-  return add5;
-}
