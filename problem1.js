@@ -5,11 +5,3 @@ const persons = [
   { name: "Shkive", age: 20, gender: "male" },
   { name: "Piya", age: 20, gender: "Female" },
 ];
-
-function filterMale(peopleArray) {
-  const male = peopleArray.filter((person) => person.gender !== "Female");
-  const maleName = male.map((person) => person.name);
-  return maleName;
-}
-const result = filterMale(persons);
-console.log(result);
