@@ -86,3 +86,28 @@ function filterMale(peopleArray) {
 }
 const results = filterMale(persons);
 console.log(result);
+function throttle(func, delay) {
+  let lastCall = 0;
+  return (...args) => {
+    const now = Date.now();
+    if (now - lastCall >= delay) {
+      lastCall = now;
+      func(...args);
+    }
+  };
+}
+function double(number) {
+  const double = number * 2;
+  return addFive(double);
+}
+function squareDoubleAddFive(number) {
+  return square(number);
+}
+
+console.log(squareDoubleAddFive(5));
+
+function removeDuplicates(arr) {
+  return [...new Set(arr)];
+}
+
+console.log(isBalanced("(())"));
