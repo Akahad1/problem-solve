@@ -1,37 +1,18 @@
-function square(number) {
-    const squared = number * number;
-    return double(squared);
-  }
-  function double(number) {
-    const double = number * 2;
-    return addFive(double);
-  }
-  function squareDoubleAddFive(number) {
-    return square(number);
-  }
-  
-  console.log(squareDoubleAddFive(5));
-  
-  function removeDuplicates(arr) {
-    return [...new Set(arr)];
-  }
-  
-  console.log(isBalanced("(())"));
-  function filterMale(peopleArray) {
-    const male = peopleArray.filter((person) => person.gender !== "Female");
-    const maleName = male.map((person) => person.name);
-    return maleName;
-  }
-  const results = filterMale(persons);
-  console.log(result);
-  function throttle(func, delay) {
-    let lastCall = 0;
-    return (...args) => {
-      const now = Date.now();
-      if (now - lastCall >= delay) {
-        lastCall = now;
-        func(...args);
-      }
-    };
-  }
-  
+const checkNumber = (num) => {
+  if (num > 0) return "Positive";
+  if (num < 0) return "Negative";
+  return "Zero";
+};
+
+console.log(checkNumber(5)); // "Positive"
+console.log(checkNumber(-3)); // "Negative"
+console.log(checkNumber(0)); // "Zero"
+
+const frequency = (arr) => {
+  return arr.reduce((acc, num) => {
+    acc[num] = (acc[num] || 0) + 1;
+    return acc;
+  }, {});
+};
+
+console.log(frequency([1, 2, 2, 3, 3, 3])); // {1: 1, 2: 2, 3: 3}
