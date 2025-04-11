@@ -26,3 +26,11 @@ const people = [
   { name: "piya", age: 28, gender: "female" },
   { name: "David", age: 35, gender: "male" },
 ];
+const frequency = (arr) => {
+  return arr.reduce((acc, num) => {
+    acc[num] = (acc[num] || 0) + 1;
+    return acc;
+  }, {});
+};
+
+console.log(frequency([1, 2, 2, 3, 3, 3])); // {1: 1, 2: 2, 3: 3}
