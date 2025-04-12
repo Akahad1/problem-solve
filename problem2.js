@@ -90,35 +90,3 @@ const uniqueNumbers = (arr) => {
 };
 
 console.log(uniqueNumbers([1, 2, 2, 3, 4, 4])); // [1, 3]
-function double(number) {
-  const double = number * 2;
-  return addFive(double);
-}
-function squareDoubleAddFive(number) {
-  return square(number);
-}
-
-console.log(squareDoubleAddFive(5));
-
-function removeDuplicates(arr) {
-  return [...new Set(arr)];
-}
-
-console.log(isBalanced("(())"));
-function filterMale(peopleArray) {
-  const male = peopleArray.filter((person) => person.gender !== "Female");
-  const maleName = male.map((person) => person.name);
-  return maleName;
-}
-const results = filterMale(persons);
-console.log(result);
-function throttle(func, delay) {
-  let lastCall = 0;
-  return (...args) => {
-    const now = Date.now();
-    if (now - lastCall >= delay) {
-      lastCall = now;
-      func(...args);
-    }
-  };
-}
