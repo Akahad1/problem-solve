@@ -20,3 +20,20 @@ function throttle(func, delay) {
     }
   };
 }
+function longestWord(sentence) {
+  return sentence
+    .split(" ")
+    .reduce(
+      (longest, word) => (word.length > longest.length ? word : longest),
+      ""
+    );
+}
+function double(number) {
+  const double = number * 2;
+  return addFive(double);
+}
+function squareDoubleAddFive(number) {
+  return square(number);
+}
+
+console.log(squareDoubleAddFive(5));
