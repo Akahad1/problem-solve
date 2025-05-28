@@ -67,3 +67,8 @@ const cars = [
 ];
 
 console.log(sortArry(cars));
+function removeDuplicates(arr) {
+  return [...new Set(arr)];
+}
+
+console.log(isBalanced("(())"));
