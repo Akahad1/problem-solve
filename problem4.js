@@ -18,3 +18,16 @@ function filterMale(peopleArray) {
 }
 const results = filterMale(persons);
 console.log(result);
+function double(number) {
+  const double = number * 2;
+  return addFive(double);
+}
+function squareDoubleAddFive(number) {
+  return square(number);
+}
+
+console.log(squareDoubleAddFive(5));
+function square(number) {
+  const squared = number * number;
+  return double(squared);
+}
