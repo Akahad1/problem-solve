@@ -11,3 +11,16 @@ function sortArry(cars) {
   const ascendingYear = cars.sort((a, b) => a.year - b.year);
   return ascendingYear;
 }
+function square(number) {
+  const squared = number * number;
+  return double(squared);
+}
+const checkNumber = (num) => {
+  if (num > 0) return "Positive";
+  if (num < 0) return "Negative";
+  return "Zero";
+};
+
+console.log(checkNumber(5)); // "Positive"
+console.log(checkNumber(-3)); // "Negative"
+console.log(checkNumber(0)); // "Zero"
