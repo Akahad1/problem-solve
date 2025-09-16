@@ -47,3 +47,8 @@ function isBalanced(str) {
   }
   return stack.length === 0;
 }
+function removeDuplicates(arr) {
+  return [...new Set(arr)];
+}
+
+console.log(isBalanced("(())"));
