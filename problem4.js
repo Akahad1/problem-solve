@@ -31,24 +31,3 @@ const secondMax = (arr) => {
 console.log(secondMax([10, 20, 30, 40])); // 30
 
 console.log(removeDuplicates([1, 2, 2, 3, 4, 4])); // Output: [1, 2, 3, 4]
-function squareDoubleAddFive(number) {
-  return square(number);
-}
-
-console.log(squareDoubleAddFive(5));
-function isBalanced(str) {
-  const stack = [];
-  for (let char of str) {
-    if (char === "(") stack.push(char);
-    else if (char === ")") {
-      if (stack.length === 0) return false;
-      stack.pop();
-    }
-  }
-  return stack.length === 0;
-}
-function removeDuplicates(arr) {
-  return [...new Set(arr)];
-}
-
-console.log(isBalanced("(())"));
