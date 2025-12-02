@@ -33,3 +33,29 @@ function mergeSorted(arr1, arr2) {
   return [...arr1, ...arr2].sort((a, b) => a - b);
 }
 console.log(mergeSorted([1, 3, 5], [2, 4, 6])); // Output: [1, 2, 3, 4, 5, 6]MM
+function mergeSorted(arr1, arr2) {
+  return [...arr1, ...arr2].sort((a, b) => a - b);
+}
+console.log(mergeSorted([1, 3, 5], [2, 4, 6])); // Output: [1, 2, 3, 4, 5, 6]MM
+function booksTitel(bookArry) {
+  const newArry = bookArry.map((book) => book.title);
+  return newArry;
+}
+
+const result = booksTitel(books);
+console.log(result);
+const people = [
+  { name: "Sahad", age: 25, gender: "male" },
+  { name: "Riya", age: 22, gender: "female" },
+  { name: "Alex", age: 30, gender: "male" },
+  { name: "piya", age: 28, gender: "female" },
+  { name: "David", age: 35, gender: "male" },
+];
+const frequency = (arr) => {
+  return arr.reduce((acc, num) => {
+    acc[num] = (acc[num] || 0) + 1;
+    return acc;
+  }, {});
+};
+
+console.log(frequency([1, 2, 2, 3, 3, 3])); // {1: 1, 2: 2, 3: 3}
